@@ -10,46 +10,11 @@ body {
 .container {
     width: 90%;
     /* max-width: 800px; */
+    height: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 5px;
-}
-
-td {
-    padding: 2px;
-    border: none;
-    /* line-height: 1.2; */
-    vertical-align: top;
-}
-
-h1,
-h2 {
-    text-align: left;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    width: 100%;
-}
-
-
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ol li {
-    line-height: 1.5;
 }
 
 .info-container {
@@ -90,6 +55,43 @@ ol li {
         /* 增加间距 */
     }
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+}
+
+td {
+    padding: 2px;
+    border: none;
+    /* line-height: 1.2; */
+    vertical-align: top;
+}
+
+h1,
+h2 {
+    text-align: left;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ol li {
+    line-height: 1.5;
+}
+
 
 /* 打印样式 */
 @media print {
