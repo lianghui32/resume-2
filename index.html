@@ -77,6 +77,21 @@
 
         /* 打印样式 */
         @media print {
+            @page {
+                size: A4;
+                /* 设置纸张为A4 */
+                margin: 20mm 10mm;
+                /* 设置上下和左右边距 */
+                page-break-inside: avoid;
+            }
+
+            body {
+                margin: 0;
+                /* 取消页面边距 */
+                font-size: 12pt;
+                /* 设置字体大小 */
+            }
+
             body * {
                 visibility: hidden;
                 /* 隐藏页面上的所有元素 */
@@ -103,6 +118,19 @@
                 /* 圆角效果 */
                 overflow: hidden;
                 /* 确保没有滚动条 */
+                page-break-inside: avoid;
+            }
+
+            /* 避免在打印时拆分行 */
+            h1,
+            h2,
+            h3,
+            h4,
+            table,
+            tr,
+            td {
+                page-break-inside: avoid;
+                /* 避免在页面内断开 */
             }
 
             .no-print {
