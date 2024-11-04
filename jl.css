@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     /* max-width: 800px; */
     margin: 0 auto;
     padding: 20px;
@@ -50,6 +50,45 @@ a:hover {
 
 ol li {
     line-height: 1.5;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info-table {
+    flex: 1;
+    /* 表格占据剩余空间 */
+    margin-right: 20px;
+    /* 表格和图片之间的间距 */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-container img {
+    height: 80px;
+    margin-left: 10px;
+    /* 增加图片之间的间距 */
+}
+
+@media (max-width: 600px) {
+    .info-container {
+        flex-direction: column;
+        /* 小屏幕时上下排列 */
+        align-items: flex-start;
+        /* 左对齐 */
+    }
+
+    .image-container {
+        margin-top: 10px;
+        /* 增加间距 */
+    }
 }
 
 /* 打印样式 */

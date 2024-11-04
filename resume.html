@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>梁慧的简历</title>
+    <title>梁慧的简历 | Liang Hui`s Resume</title>
     <link rel="stylesheet" href="jl.css">
 </head>
 
@@ -12,25 +12,29 @@
 
     <div class="container">
         <h1>梁慧</h1>
-        <table>
-            <tr>
-                <td><strong>性别：</strong> 男</td>
-                <td><strong>出生日期：</strong> 2001年04月25日</td>
-                <td rowspan="3" style="text-align: center;">
-                    <img src="img/image.png" style="height: 80px;" />
-                </td>
-            </tr>
-            <tr>
-                <td><strong>学历：</strong> 本科</td>
-                <td><strong>联系方式：</strong> (+86) 181-5475-9159</td>
-            </tr>
-            <tr>
-                <td><strong>籍贯：</strong> 广西田东</td>
-                <td><strong>电子邮箱：</strong> <a href="mailto:lhui_top@163.com"
-                        style="text-decoration: none;">lhui_top@163.com</a></td>
-            </tr>
-        </table>
 
+        <div class="info-container">
+            <table class="info-table">
+                <tr>
+                    <td><strong>性别：</strong> 男</td>
+                    <td><strong>出生日期：</strong> 2001年04月25日</td>
+                </tr>
+                <tr>
+                    <td><strong>学历：</strong> 本科</td>
+                    <td><strong>联系方式：</strong> (+86) 181-5475-9159</td>
+                </tr>
+                <tr>
+                    <td><strong>籍贯：</strong> 广西田东</td>
+                    <td><strong>电子邮箱：</strong> <a href="mailto:lhui_top@163.com"
+                            style="text-decoration: none;">lhui_top@163.com</a></td>
+                </tr>
+            </table>
+
+            <div class="image-container">
+                <img src="img/bytx.jpg" />
+                <img src="img/image.png" />
+            </div>
+        </div>
         <h2>教育经历</h2>
         <table>
             <tr>
@@ -41,7 +45,7 @@
             </tr>
             <tr>
                 <td colspan="2">GPA: 7.41/10.0</td>
-                <td colspan="4"><a href="">学信网、双证、成绩单认证</a></td>
+                <td colspan="4"><a href="https://116.198.228.5/">学信网、双证、成绩单认证</a></td>
             </tr>
         </table>
 
@@ -69,7 +73,13 @@
         </table>
 
         <h2>项目经历</h2>
-        <h3><a href="http://116.198.228.5/stock/" target="_blank">一、基于 Django 的股票预测系统开发与部署</a></h3>
+
+        <div style="display: inline;">
+            <h3 style="display: inline;"><a href="http://116.198.228.5/stock/" target="_blank">一、基于 Django
+                    的股票预测系统开发与部署</a></h3>
+            <a href="http://116.198.228.5/stock/" target="_blank" style="float: right;">http://116.198.228.5/stock/</a>
+        </div>
+
         <h4>项目概述：</h4>
         负责开发并部署一个基于 Django 框架的股票预测系统，该系统能够提供用户账户管理、数据获取与预处理、股票价格预测以及实时行情展示等功能。
 
