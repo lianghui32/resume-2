@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+}
+
+td {
+    padding: 2px;
+    border: none;
+    /* line-height: 1.2; */
+    vertical-align: top;
+}
+
+h1,
+h2 {
+    text-align: left;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ol li {
+    line-height: 1.5;
+}
+
+/* 打印样式 */
+@media print {
+    @page {
+        size: A4;
+        /* 设置纸张为A4 */
+        margin: 10mm;
+        /* 设置边距 */
+    }
+
+    body {
+        margin: 0;
+        /* 取消页面边距 */
+        font-size: 12pt;
+        /* 设置字体大小 */
+    }
+
+    /* 隐藏所有内容 */
+    body>* {
+        display: none;
+        /* 隐藏所有直接子元素 */
+    }
+
+    /* 显示.container元素 */
+    .container {
+        display: block;
+        /* 显示.container */
+        width: 100%;
+        /* 宽度为100% */
+        /* max-width: none; */
+        /* 取消最大宽度 */
+        margin: 0;
+        /* 取消外边距 */
+        padding: 0;
+        /* 取消内边距 */
+    }
+
+    /* 如果.container的默认显示是inline-block或其他 */
+    .container {
+        display: block;
+    }
+
+    /* 可以隐藏不需要打印的元素 */
+    .no-print {
+        display: none;
+    }
+}

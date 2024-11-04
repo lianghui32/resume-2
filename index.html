@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梁慧的导航页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        strong {
+            margin: 0;
+            flex: 1;
+        }
+
+        nav {
+            text-align: center;
+            flex: 2;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-icons img {
+            width: 30px; /* 头像大小 */
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 50%;
+            cursor: pointer; /* 鼠标悬停变成指针 */
+        }
+
+        #content {
+            text-align: center;
+            height: 100vh;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    </style>
+    <script>
+        function loadPage(page) {
+            document.getElementById('content').innerHTML = `<iframe src="${page}" title="内容"></iframe>`;
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <strong>梁慧的导航页面</strong>
+        <nav>
+            <button class="btn" onclick="loadPage('resume.html')">简历</button>
+            <button class="btn" onclick="loadPage('pdf.html')">学历认证</button>
+        </nav>
+        <div class="profile-icons">
+            <img src="./img/Gitee.png" alt="Gitee主页" onclick="window.open('https://gitee.com/lianghui2333', '_blank')">
+            <img src="./img/CSDN.png" alt="CSDN主页" onclick="window.open('https://blog.csdn.net/qq_52313022', '_blank')">
+        </div>
+    </header>
+
+    <div id="content">
+        <p>请点击上面的按钮以查看内容</p>
+    </div>
+
+</body>
+
+</html>
