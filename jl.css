@@ -38,6 +38,7 @@ body {
 
 .image-container img {
     height: 80px;
+    width: auto;
     margin-left: 10px;
     /* 增加图片之间的间距 */
 }
