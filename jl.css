@@ -43,7 +43,14 @@ body {
     /* 增加图片之间的间距 */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 375px) {
+
+    /* 调整字体大小 */
+    body {
+        font-size: 10px;
+        /* 根据需要调整 */
+    }
+
     .info-container {
         flex-direction: column;
         /* 小屏幕时上下排列 */
@@ -55,6 +62,46 @@ body {
         margin-top: 10px;
         /* 增加间距 */
     }
+
+    /* 调整图片大小 */
+    .image-container img {
+        flex-direction: column;
+        height: 40px;
+        /* 根据需要调整 */
+        width: auto;
+        margin-left: 5px;
+        /* 根据需要调整 */
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    /* 调整字体大小 */
+    body {
+        font-size: 10px;
+        /* 根据需要调整 */
+    }
+
+    .info-container {
+        /* flex-direction: column; */
+        /* 小屏幕时上下排列 */
+        align-items: flex-start;
+        /* 左对齐 */
+    }
+
+
+    /* 调整图片大小 */
+    .image-container img {
+        flex-direction: column;
+        height: 50px;
+        /* 根据需要调整 */
+        width: auto;
+        margin-left: 5px;
+        /* 根据需要调整 */
+    }
+
 }
 
 table {
