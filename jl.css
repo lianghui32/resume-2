@@ -9,7 +9,6 @@ body {
 
 .container {
     width: 90%;
-    /* max-width: 800px; */
     height: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -25,14 +24,11 @@ body {
 
 .info-table {
     flex: 1;
-    /* 表格占据剩余空间 */
     margin-right: 20px;
-    /* 表格和图片之间的间距 */
 }
 
 .image-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -40,68 +36,41 @@ body {
     height: 80px;
     width: auto;
     margin-left: 10px;
-    /* 增加图片之间的间距 */
 }
 
 @media (max-width: 375px) {
-
-    /* 调整字体大小 */
     body {
         font-size: 10px;
-        /* 根据需要调整 */
     }
 
     .info-container {
         flex-direction: column;
-        /* 小屏幕时上下排列 */
         align-items: flex-start;
-        /* 左对齐 */
     }
 
     .image-container {
         margin-top: 10px;
-        /* 增加间距 */
     }
 
-    /* 调整图片大小 */
     .image-container img {
-        flex-direction: column;
         height: 40px;
-        /* 根据需要调整 */
-        width: auto;
         margin-left: 5px;
-        /* 根据需要调整 */
     }
-
 }
 
-
 @media (max-width: 700px) {
-
-    /* 调整字体大小 */
     body {
         font-size: 10px;
-        /* 根据需要调整 */
     }
 
     .info-container {
-        /* flex-direction: column; */
-        /* 小屏幕时上下排列 */
         align-items: flex-start;
-        /* 左对齐 */
     }
 
-
-    /* 调整图片大小 */
     .image-container img {
-        flex-direction: column;
         height: 50px;
-        /* 根据需要调整 */
-        width: auto;
         margin-left: 5px;
-        /* 根据需要调整 */
     }
-
 }
 
 table {
@@ -112,8 +81,6 @@ table {
 
 td {
     padding: 2px;
-    border: none;
-    /* line-height: 1.2; */
     vertical-align: top;
 }
 
@@ -124,8 +91,6 @@ h2 {
     padding-bottom: 1px;
     width: 100%;
 }
-
-
 
 a {
     color: #007bff;
