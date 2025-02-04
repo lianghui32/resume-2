@@ -112,8 +112,10 @@ ol li {
         size: A4;
         /* 设置纸张为A4 */
         margin: 10mm;
-        /* 设置边距 */
+        /* 设置上下和左右边距 */
+        page-break-inside: avoid;
     }
+
 
     body {
         margin: 0;
@@ -141,12 +143,51 @@ ol li {
         padding: 0;
         /* 取消内边距 */
     }
-
-    /* 如果.container的默认显示是inline-block或其他 */
-    .container {
-        display: block;
+    .info-container {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-start;
+        margin-bottom: 10px;
     }
 
+    .info-table {
+        margin-right: 0;
+    }
+
+    .image-container {
+        margin-top: 10px;
+    }
+
+    .image-container img {
+        height: 70px;
+        margin-left: 5px;
+    }
+
+    h1, h2 {
+        margin: 0;
+        padding: 0;
+        /* border-bottom: none; */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 5px;
+    }
+
+    td {
+        padding: 2px;
+        vertical-align: top;
+    }
+
+    ol li {
+        line-height: 1.3;
+    }
+
+    /* 强制分页 */
+    .page-break {
+        page-break-after: always;
+    }
     /* 可以隐藏不需要打印的元素 */
     .no-print {
         display: none;
