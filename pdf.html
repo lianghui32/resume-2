@@ -18,9 +18,10 @@
         }
 
         .document-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自动填充列，每列最小宽度为300px */
+            gap: 10px; /* 每个模块之间的间隔 */
+            justify-content: center; /* 居中对齐 */
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
@@ -28,22 +29,17 @@
         }
 
         .document {
-            flex: 1 1 45%;
-            /* 每个模块默认占45%的宽度 */
-            margin: 10px;
+            margin: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             background-color: #fff;
             border-radius: 5px;
             padding: 10px;
+            max-width: 400px; /* 添加最大宽度限制 */
         }
 
-        iframe {
+        .document img {
             width: 100%;
-            height: 600px;
-            /* 可以根据需要调整高度 */
-            border: none;
-            border-radius: 5px;
-            background-color: #f0f0f0;
+            height: auto; /* 保持图片宽高比 */
         }
 
         .btn {
@@ -60,10 +56,20 @@
             background-color: #0056b3;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 425px) {
+            .document-container {
+                grid-template-columns: 1fr; /* 在小屏幕下只有一列 */
+            }
             .document {
-                flex: 1 1 100%;
-                /* 在小屏幕下每个模块占满整行 */
+                margin: 5px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 10px;
+                max-width: 100%; /* 在小屏幕下最大宽度为100% */
+            }
+            .document img {
+                max-height: 400px; /* 在小屏幕下增加最大高度限制 */
             }
         }
     </style>
@@ -76,28 +82,32 @@
 
         <div class="document">
             <h2>学信网 PDF</h2>
-            <iframe src="./学信网.pdf" title="学信网文档"></iframe>
-            <a class="btn" href="./学信网.pdf" download>下载学信网 PDF</a>
+            <img src="./img/学信网.jpg" alt="学信网文档" width="100%">
+            <!-- <p>学信网.jpg：更详细<a href="./img/学信网.jpg" download>下载</a></p> -->
         </div>
 
         <div class="document">
             <h2>双证 PDF</h2>
-            <iframe src="./双证.pdf" title="双证文档"></iframe>
-            <a class="btn" href="./双证.pdf" download>下载双证 PDF</a>
+            <img src="./img/双证.jpg" alt="双证文档" width="100%">
+            <!-- <p>双证.jpg：更详细<a href="./img/双证.jpg" download>下载</a></p> -->
         </div>
 
         <div class="document">
             <h2>成绩单 PDF</h2>
-            <iframe src="./成绩单.pdf" title="成绩单文档"></iframe>
-            <a class="btn" href="./成绩单.pdf" download>下载成绩单 PDF</a>
             <img src="./img/成绩单.jpg" alt="成绩单" width="100%">
-            <p>成绩单.jpg：更详细<a href="./img/成绩单.jpg" download>下载</a></p>
+            <!-- <p>成绩单.jpg：更详细<a href="./img/成绩单.jpg" download>下载</a></p> -->
+        </div>
+
+        <div class="document">
+            <h2>成绩单1 PDF</h2>
+            <img src="./img/成绩单1.jpg" alt="成绩单1" width="100%">
+            <!-- <p>成绩单1.jpg：更详细<a href="./img/成绩单1.jpg" download>下载</a></p> -->
         </div>
 
         <div class="document">
             <h2>绩点说明 PDF</h2>
-            <iframe src="./绩点说明2.pdf" title="绩点说明文档"></iframe>
-            <a class="btn" href="./绩点说明2.pdf" download>下载绩点说明 PDF</a>
+            <img src="./img/绩点说明.jpg" alt="绩点说明文档" width="100%">
+            <!-- <p>绩点说明.jpg：更详细<a href="./img/绩点说明.jpg" download>下载</a></p> -->
         </div>
     </div>
 
